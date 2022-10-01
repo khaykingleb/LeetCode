@@ -16,7 +16,6 @@ repos:
     hooks:
       - id: clang-format
         args: [--style=Microsoft]
-      - id: clang-tidy
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.1.0
@@ -24,4 +23,4 @@ repos:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies:
-          - "@commitlint/config-conventional"
+        - "@commitlint/config-conventional"
