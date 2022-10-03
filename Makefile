@@ -20,6 +20,7 @@ repo-pre-commit: ## Install pre-commit
 
 clean-general: ## Delete general files
 	find . | grep -E "\.o" | xargs rm -rf
+	find . | grep -E "\.exe" | xargs rm -rf
 .PHONY: clean-general
 
 clean-all: clean-general ## Delete all "junk" files
