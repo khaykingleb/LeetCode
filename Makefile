@@ -18,7 +18,7 @@ repo-pre-commit: ## Install pre-commit
 ##==================================================================================================
 ##@ Building with CMake
 
-build:
+all-build:
 	rm -rf build
 	cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1
 	cmake --build build
