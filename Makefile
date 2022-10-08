@@ -22,7 +22,7 @@ all-build:
 	rm -rf build
 	cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1
 	cmake --build build
-.PHONY: build
+.PHONY: all-build
 
 all-tests:
 	cd build && ctest
@@ -31,10 +31,10 @@ all-tests:
 ##==================================================================================================
 ##@ Cleaning
 
-clean-general: ## Delete general files
+general-clean: ## Delete general files
 	find . | grep -E "\.o" | xargs rm -rf
 	find . | grep -E "\.exe" | xargs rm -rf
-.PHONY: clean-general
+.PHONY: general-clean
 
-clean-all: clean-general ## Delete all "junk" files
-.PHONY: clean-all
+all-clean: general-clean ## Delete all "junk" files
+.PHONY: all-clean
