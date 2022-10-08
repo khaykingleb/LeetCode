@@ -38,3 +38,9 @@ general-clean: ## Delete general files
 
 all-clean: general-clean ## Delete all "junk" files
 .PHONY: all-clean
+
+##==================================================================================================
+##@ Miscellaneous
+update-pre-commit-hooks:
+	pre-commit autoupdate
+.PHONY: update-pre-commit-hooks
