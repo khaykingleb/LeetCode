@@ -8,7 +8,7 @@ TEST(DailyTemperatures, usual_case)
 
     ASSERT_EQ(result.size(), answer.size());
 
-    for (std::size_t i = 0; i < result.size(); ++i)
+    for (size_t i = 0; i < result.size(); ++i)
     {
         EXPECT_EQ(result[i], answer[i]);
     }
